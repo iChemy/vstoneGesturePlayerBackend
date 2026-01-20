@@ -67,7 +67,7 @@ public class JsonConverter {
                 angle_map.put(CCommUMotion.SV_L_EYE_Y, Short.valueOf((short) servoJson.getInt("L_EYE_Y")));
             if (servoJson.has("R_EYE_Y"))
                 angle_map.put(CCommUMotion.SV_R_EYE_Y, Short.valueOf((short) servoJson.getInt("R_EYE_Y")));
-
+            pose.SetPose(angle_map);
             poseCmdList.add(new PlayPoseInfo(pose, msec));
         }
 
