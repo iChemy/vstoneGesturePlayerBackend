@@ -17,6 +17,7 @@ public class JsonConverter {
 
         // "poses" 配列を取得
         if (!rootObject.has("poses")) {
+            System.err.println("poses field cannot be found");
             return poseCmdList;
         }
         JSONArray posesArray = rootObject.getJSONArray("poses");
