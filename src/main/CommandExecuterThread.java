@@ -29,7 +29,6 @@ public class CommandExecuterThread implements Runnable {
         CCommUMotion.SV_R_EYE_Y,
         CCommUMotion.SV_EYELIDs,
         CCommUMotion.SV_MOUTH
-
     };
     private final Short[] HOME_POSITION_VALUES = new Short[]{
         -2, 0, 58, 2, -58, -2, 0, 0, 0, 0, 0, 0, 0, 0
