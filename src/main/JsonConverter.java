@@ -29,6 +29,7 @@ public class JsonConverter {
 
         // 配列をループ
         for (int i = 0; i < posesArray.length(); i++) {
+            System.out.println(i);
             JSONObject poseJson = posesArray.getJSONObject(i);
             CRobotPose pose = new CRobotPose();
             HashMap<Byte, Short> angle_map = new HashMap<>();
