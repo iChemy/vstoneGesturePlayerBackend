@@ -22,6 +22,11 @@ public class JsonConverter {
         }
         JSONArray posesArray = rootObject.getJSONArray("poses");
 
+        if (posesArray.length() <= 0) {
+            System.err.println("no poses");
+            return poseCmdList;
+        }
+
         // 配列をループ
         for (int i = 0; i < posesArray.length(); i++) {
             JSONObject poseJson = posesArray.getJSONObject(i);
