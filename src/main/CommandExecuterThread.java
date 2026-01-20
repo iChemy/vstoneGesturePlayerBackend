@@ -42,6 +42,7 @@ public class CommandExecuterThread implements Runnable {
                 JSONObject cmd = commandQueue.take();
 
                 List<PlayPoseInfo> poses = JsonConverter.parsePoseList(cmd);
+                logger.log(Level.INFO, "poses", poses);
 
                 for (PlayPoseInfo pose: poses) {
                     motion.play(pose.pose, pose.msec);
